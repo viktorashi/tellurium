@@ -559,6 +559,7 @@ the model itself.  Inside a model definition, the model itself may be
 annotated using the 'model' keyword:
 
 ::
+
   model foo()
     model model_entity_is "http://identifiers.org/biomodels.db/BIOMD0000000004"
     model description "http://identifiers.org/pubmed/1833774"
@@ -570,11 +571,11 @@ annotated using the 'model' keyword:
 
 You can also define an element's 'notes', using the 'notes' keyword.  If
 the notes take more than one line, you can group them together using three
-tick marks '\`\`\`':
+tick marks \`\`\` :
 
 ::
 
-  model notes \`\`\`
+  model notes ```
       <p>This model represents the inactive forms of CDC-2 Kinase and Cyclin 
       Protease as separate species, unlike the ODEs in the published paper, in 
       which the equations for the inactive forms are substituted into the 
@@ -583,7 +584,7 @@ tick marks '\`\`\`':
       explicit reactions M&lt;-&gt;MI and X&lt;-&gt;XI. The terms in the 
       kinetic laws are identical to the corresponding terms in the kinetic 
       laws in the published paper.</p>
-  \`\`\`
+  ```
 
 
 Modular Models
@@ -739,67 +740,57 @@ simulation.
 
 .. container:: parsed-literal
 
-   --------------------------------------------------------------------------------tellurium
-      2.1.0 roadrunner : 1.5.1 antimony : 2.9.4 libsbml : 5.15.0
-      libsedml : 0.4.3 phrasedml : 1.0.9
-      --------------------------------------------------------------------------------
+::
+
+  --------------------------------------------------------------------------------
+  tellurium : 2.2.10
+  roadrunner : 2.7.0
+  antimony : 2.14.0
+  rrplugins : 2.7.0
+  libsbml : 5.20.2
+  libsedml : 2.0.32
+  phrasedml : 1.3.0
+  --------------------------------------------------------------------------------
 
 .. figure:: _notebooks/core/antimonyExample_files/antimonyExample_2_1.png
    :alt: image
 
-   image
-
 .. figure:: _notebooks/core/antimonyExample_files/antimonyExample_2_2.png
    :alt: image
-
-   image
 
 .. figure:: _notebooks/core/antimonyExample_files/antimonyExample_2_3.png
    :alt: image
 
-   image
-
 .. container:: parsed-literal
+
+::
 
    Comparing Antimony at time 0 & 40 (expect no differences)
 
 .. figure:: _notebooks/core/antimonyExample_files/antimonyExample_2_5.png
    :alt: image
 
-   image
-
 .. container:: parsed-literal
 
-   Comparing Antimony at time 0 & 15 --- before.sb
+::
+
+  Comparing Antimony at time 0 & 15 --- before.sb
 
    +++ after.sb
 
    @@ -6,7 +6,7 @@
 
-      \_E1: at time >= 20: p1 = 0;
+      _E1: at time >= 20: p1 = 0;
 
       // Variable initializations:
 
    -  p1 = 0;
-   -  p1 = 10;
+   +  p1 = 10;
 
-      // Other declarations: var p1;
+      // Other declarations: 
+      var p1;
 
-.. code:: python
-
-   r.getSimulationData()
-
-.. container:: parsed-literal
-
-   time, p1
-
-..
-
-   [[ 0, 0],
-      [ 0.000514839, 0], [ 5.1489, 0], [ 10, 0], [ 10, 10], [ 10.0002,
-      10], [ 12.2588, 10], [ 15, 10]]
-
-   --------------
+--------------
 
 Signals
 ~~~~~~~
@@ -837,8 +828,6 @@ assignment expression.
 .. figure:: images/antimony_0.png
    :alt: image
 
-   image
-
 Ramp
 ''''
 
@@ -868,7 +857,6 @@ variable to one. This variable is used to acticate a ramp function.
 .. figure:: images/antimony_1.png
    :alt: image
 
-   image
 
 Ramp then Stop
 ''''''''''''''
@@ -903,7 +891,6 @@ that results in a horizontal line.
 .. figure:: images/antimony_2.png
    :alt: image
 
-   image
 
 Pulse
 '''''
@@ -937,7 +924,6 @@ p2 equal to zero.
 .. figure:: images/antimony_3.png
    :alt: image
 
-   image
 
 Sinusoidal Input
 ''''''''''''''''
