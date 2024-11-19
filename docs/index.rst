@@ -6,7 +6,7 @@
 Welcome to tellurium's documentation!
 =====================================
 Model, simulate, and analyse biochemical systems using a single tool.
-To view the documentation on libRoadRunner, please go `here <libroadrunner.readthedocs.io/>`_.
+To view the documentation on libRoadRunner, please go `here <https://libroadrunner.readthedocs.io/>`_.
 
 Supported by NIGMS R01-GM123032
 
